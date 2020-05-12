@@ -9,16 +9,18 @@ import java.util.List;
 
 public class App
 {
+    // Const Field
+
+    private static final WebClient client = new WebClient();
 
     // Field
 
-    List<Auto> autos = new ArrayList<>();
+    private final List<Auto> autos = new ArrayList<>();
 
     // Construct
 
     App()
     {
-        WebClient client = new WebClient();
         client.getOptions().setCssEnabled(false);
         client.getOptions().setJavaScriptEnabled(false);
 
