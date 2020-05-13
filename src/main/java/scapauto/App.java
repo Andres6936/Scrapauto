@@ -21,8 +21,8 @@ public class App
 
     // Field
 
-    private final List<Auto> autos = new ArrayList<>();
-    private final List<String> tradeMarks = new ArrayList<>();
+    private final List<String> nameTradeMarks = new ArrayList<>();
+    private final List<TradeMark> tradeMarks = new ArrayList<>();
 
     // Construct
 
@@ -34,7 +34,7 @@ public class App
         fillTradeMarks();
         showTradeMarks();
 
-        for (String tradeMark : tradeMarks) {
+        for (String tradeMark : nameTradeMarks) {
             // Format of URL for the page: https://www.autoevolution.com/$tradeMark$/
             extractInformationOfAutos(URL_OBJECTIVE + tradeMark.replace(" ", "-") + "/");
             // Wait a small time for avoid will be blocked for the page or the hosting
@@ -52,10 +52,12 @@ public class App
             List<HtmlElement> modelsInProduction = pageWrapper.getByXPath("//div[@class='carmod clearfix ']");
             List<HtmlElement> modelsDiscontinue = pageWrapper.getByXPath("//div[@class='carmod clearfix disc']");
 
-            fillListAutos(modelsInProduction);
-            fillListAutos(modelsDiscontinue);
+            TradeMark tradeMark = new TradeMark(url);
+            tradeMark.fillFromHtml(modelsInProduction);
+            tradeMark.fillFromHtml(modelsDiscontinue);
 
-            showAutos();
+            tradeMarks.add(tradeMark);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -72,50 +74,16 @@ public class App
 
             for (var element : tradeMarksElement) {
                 HtmlElement tradeMarkH5 = element.getFirstByXPath("./h5/a[@*]/span[@itemprop='name']");
-                tradeMarks.add(tradeMarkH5.asText().toLowerCase());
+                nameTradeMarks.add(tradeMarkH5.asText().toLowerCase());
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private void fillListAutos(List<HtmlElement> elements)
-    {
-        for (var element : elements) {
-            HtmlElement nameElement = element.getFirstByXPath(".//h4");
-            String nameModel = nameElement.asText();
-
-            HtmlElement typeElement = element.getFirstByXPath(".//p[@class='body']");
-            String typeModel = typeElement.asText();
-
-            List<HtmlElement> enginesElement = element.getByXPath(".//p[@class='eng']/span");
-            StringBuilder typeEngines = new StringBuilder(40);
-
-            if (enginesElement.size() > 1) {
-                for (var engine : enginesElement) {
-                    typeEngines.append(engine.asText()).append(" & ");
-                }
-
-                // Delete the " & " extra that was added.
-                typeEngines.delete(typeEngines.length() - 3, typeEngines.length());
-            } else {
-                typeEngines.append(enginesElement.get(0).asText());
-            }
-
-            autos.add(new Auto(nameModel, typeModel, typeEngines.toString()));
-        }
-    }
-
-    private void showAutos()
-    {
-        for (var auto : autos) {
-            System.out.println(auto.toString());
-        }
-    }
-
     private void showTradeMarks()
     {
-        for (var tradeMark : tradeMarks) {
+        for (var tradeMark : nameTradeMarks) {
             System.out.println(tradeMark);
         }
     }
