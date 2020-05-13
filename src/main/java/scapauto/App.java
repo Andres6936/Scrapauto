@@ -5,6 +5,8 @@ import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -35,25 +37,25 @@ public class App
         fillTradeMarks();
 
         for (String tradeMark : nameTradeMarks) {
-            // Format of URL for the page: https://www.autoevolution.com/$tradeMark$/
-            extractInformationOfAutos(URL_OBJECTIVE + tradeMark.replace(" ", "-") + "/");
+            // Format of URL for the page: https://www.autoevolution.com/$trade-mark$/
+            extractInformationOfAutos(URL_OBJECTIVE, tradeMark);
             // Wait a small time for avoid will be blocked for the page or the hosting
             waitFor(10, TimeUnit.SECONDS);
-            break;
         }
     }
 
     // Methods
 
-    private void extractInformationOfAutos(final String url)
+    private void extractInformationOfAutos(final String url, final String nameTradeMark)
     {
         try {
-            HtmlPage page = CLIENT.getPage(url);
+            // Format of URL for the page: https://www.autoevolution.com/$trade-mark$/
+            HtmlPage page = CLIENT.getPage(url + nameTradeMark.replace(" ", "-") + "/");
             HtmlElement pageWrapper = page.getHtmlElementById("newscol2");
             List<HtmlElement> modelsInProduction = pageWrapper.getByXPath("//div[@class='carmod clearfix ']");
             List<HtmlElement> modelsDiscontinue = pageWrapper.getByXPath("//div[@class='carmod clearfix disc']");
 
-            TradeMark tradeMark = new TradeMark(url);
+            TradeMark tradeMark = new TradeMark(nameTradeMark.toLowerCase());
             tradeMark.fillFromHtml(modelsInProduction);
             tradeMark.fillFromHtml(modelsDiscontinue);
 
@@ -86,7 +88,14 @@ public class App
     private void writeFileJSON(final TradeMark _tradeMark)
     {
         String formatJSON = JSON.toJSONString(_tradeMark);
-        System.out.println(formatJSON);
+
+        try {
+            PrintWriter printWriter = new PrintWriter(_tradeMark.getName() + ".json");
+            printWriter.println(formatJSON);
+            printWriter.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

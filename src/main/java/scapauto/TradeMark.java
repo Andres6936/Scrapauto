@@ -9,7 +9,7 @@ public class TradeMark extends ArrayList<Auto>
 {
     // Const Field
 
-    public final String name;
+    private final String name;
 
     // Constructor
 
