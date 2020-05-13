@@ -1,8 +1,8 @@
 # Scapauto
 
-Tool for extract information of page X, the objective is make a database
-for future works. Actually the project only support to extract of data,
-but not the save in format like JSON, YAML or XML.
+Tool for extract information of page X, the objective is make a database 
+of autos for future works. Actually the project support to extract of 
+data and save in format JSON.
 
 <p align="center">
 <img src="./docs/App.png">
