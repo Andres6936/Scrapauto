@@ -56,7 +56,7 @@ public class App
 
             for (var element : tradeMarksElement) {
                 HtmlElement tradeMarkH5 = element.getFirstByXPath("./h5/a[@*]/span[@itemprop='name']");
-                tradeMarks.add(tradeMarkH5.asText());
+                tradeMarks.add(tradeMarkH5.asText().toLowerCase());
             }
         } catch (Exception e) {
             e.printStackTrace();
