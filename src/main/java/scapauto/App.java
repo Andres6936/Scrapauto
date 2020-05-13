@@ -16,6 +16,7 @@ public class App
     // Field
 
     private final List<Auto> autos = new ArrayList<>();
+    private final List<String> tradeMarks = new ArrayList<>();
 
     // Construct
 
@@ -23,6 +24,9 @@ public class App
     {
         client.getOptions().setCssEnabled(false);
         client.getOptions().setJavaScriptEnabled(false);
+
+        fillTradeMarks();
+        showTradeMarks();
 
         try {
             HtmlPage page = client.getPage("https://www.autoevolution.com/acura/");
@@ -40,6 +44,23 @@ public class App
     }
 
     // Methods
+
+    private void fillTradeMarks()
+    {
+        try {
+            HtmlPage page = client.getPage("https://www.autoevolution.com/cars/");
+            HtmlElement pageWrapper = page.getHtmlElementById("pagewrapper");
+            List<HtmlElement> tradeMarksElement = pageWrapper.getByXPath(
+                    "//div[@class='container carlist clearfix']");
+
+            for (var element : tradeMarksElement) {
+                HtmlElement tradeMarkH5 = element.getFirstByXPath("//h5/a[@*]/span[@itemprop='name']");
+                tradeMarks.add(tradeMarkH5.asText());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     private void fillListAutos(List<HtmlElement> elements)
     {
@@ -72,6 +93,13 @@ public class App
     {
         for (var auto : autos) {
             System.out.println(auto.toString());
+        }
+    }
+
+    private void showTradeMarks()
+    {
+        for (var tradeMark : tradeMarks) {
+            System.out.println(tradeMark);
         }
     }
 
