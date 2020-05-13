@@ -33,7 +33,10 @@ public class App
         fillTradeMarks();
         showTradeMarks();
 
-        extractInformationOfAutos(URL_OBJECTIVE + "acura/");
+        for (String tradeMark : tradeMarks) {
+            // Format of URL for the page: https://www.autoevolution.com/$tradeMark$/
+            extractInformationOfAutos(URL_OBJECTIVE + tradeMark.replace(" ", "-") + "/");
+        }
     }
 
     // Methods
