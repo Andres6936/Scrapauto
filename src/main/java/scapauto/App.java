@@ -33,8 +33,15 @@ public class App
         fillTradeMarks();
         showTradeMarks();
 
+        extractInformationOfAutos(URL_OBJECTIVE + "acura/");
+    }
+
+    // Methods
+
+    private void extractInformationOfAutos(final String url)
+    {
         try {
-            HtmlPage page = CLIENT.getPage(URL_OBJECTIVE + "acura/");
+            HtmlPage page = CLIENT.getPage(url);
             HtmlElement pageWrapper = page.getHtmlElementById("newscol2");
             List<HtmlElement> modelsInProduction = pageWrapper.getByXPath("//div[@class='carmod clearfix ']");
             List<HtmlElement> modelsDiscontinue = pageWrapper.getByXPath("//div[@class='carmod clearfix disc']");
@@ -47,8 +54,6 @@ public class App
             e.printStackTrace();
         }
     }
-
-    // Methods
 
     private void fillTradeMarks()
     {
