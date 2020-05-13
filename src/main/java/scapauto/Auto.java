@@ -4,11 +4,11 @@ public final class Auto
 {
     // Fields
 
-    String model;
+    private final String model;
 
-    String type;
+    private final String type;
 
-    String engine;
+    private final String engine;
 
     // Construct
 
@@ -21,7 +21,6 @@ public final class Auto
 
     // Methods
 
-
     @Override
     public String toString()
     {
@@ -30,5 +29,22 @@ public final class Auto
                 ", type='" + type + '\'' +
                 ", engine='" + engine + '\'' +
                 '}';
+    }
+
+    // Getters
+
+    public String getModel()
+    {
+        return model;
+    }
+
+    public String getType()
+    {
+        return type;
+    }
+
+    public String getEngine()
+    {
+        return engine;
     }
 }

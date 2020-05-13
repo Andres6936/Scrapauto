@@ -46,4 +46,11 @@ public class TradeMark extends ArrayList<Auto>
             this.add(new Auto(nameModel, typeModel, typeEngines.toString()));
         }
     }
+
+    // Getters
+
+    public String getName()
+    {
+        return name;
+    }
 }

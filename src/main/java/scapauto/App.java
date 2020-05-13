@@ -1,5 +1,6 @@
 package scapauto;
 
+import com.alibaba.fastjson.JSON;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
@@ -32,13 +33,13 @@ public class App
         CLIENT.getOptions().setJavaScriptEnabled(false);
 
         fillTradeMarks();
-        showTradeMarks();
 
         for (String tradeMark : nameTradeMarks) {
             // Format of URL for the page: https://www.autoevolution.com/$tradeMark$/
             extractInformationOfAutos(URL_OBJECTIVE + tradeMark.replace(" ", "-") + "/");
             // Wait a small time for avoid will be blocked for the page or the hosting
             waitFor(10, TimeUnit.SECONDS);
+            break;
         }
     }
 
@@ -56,6 +57,7 @@ public class App
             tradeMark.fillFromHtml(modelsInProduction);
             tradeMark.fillFromHtml(modelsDiscontinue);
 
+            writeFileJSON(tradeMark);
             tradeMarks.add(tradeMark);
 
         } catch (Exception e) {
@@ -81,11 +83,10 @@ public class App
         }
     }
 
-    private void showTradeMarks()
+    private void writeFileJSON(final TradeMark _tradeMark)
     {
-        for (var tradeMark : nameTradeMarks) {
-            System.out.println(tradeMark);
-        }
+        String formatJSON = JSON.toJSONString(_tradeMark);
+        System.out.println(formatJSON);
     }
 
     /**
