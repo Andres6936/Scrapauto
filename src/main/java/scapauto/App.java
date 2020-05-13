@@ -51,10 +51,11 @@ public class App
             HtmlPage page = client.getPage("https://www.autoevolution.com/cars/");
             HtmlElement pageWrapper = page.getHtmlElementById("pagewrapper");
             List<HtmlElement> tradeMarksElement = pageWrapper.getByXPath(
-                    "//div[@class='container carlist clearfix']");
+                    "//div[@class='col2width fl bcol-white carman'] " +
+                            "[@itemscope] [@itemtype='https://schema.org/Brand']");
 
             for (var element : tradeMarksElement) {
-                HtmlElement tradeMarkH5 = element.getFirstByXPath("//h5/a[@*]/span[@itemprop='name']");
+                HtmlElement tradeMarkH5 = element.getFirstByXPath("./h5/a[@*]/span[@itemprop='name']");
                 tradeMarks.add(tradeMarkH5.asText());
             }
         } catch (Exception e) {
