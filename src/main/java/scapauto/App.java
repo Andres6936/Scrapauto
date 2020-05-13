@@ -11,7 +11,12 @@ public class App
 {
     // Const Field
 
-    private static final WebClient client = new WebClient();
+    /**
+     * Site web of where we extract information
+     */
+    private static final String URL_OBJECTIVE = "https://www.autoevolution.com/";
+
+    private static final WebClient CLIENT = new WebClient();
 
     // Field
 
@@ -22,14 +27,14 @@ public class App
 
     App()
     {
-        client.getOptions().setCssEnabled(false);
-        client.getOptions().setJavaScriptEnabled(false);
+        CLIENT.getOptions().setCssEnabled(false);
+        CLIENT.getOptions().setJavaScriptEnabled(false);
 
         fillTradeMarks();
         showTradeMarks();
 
         try {
-            HtmlPage page = client.getPage("https://www.autoevolution.com/acura/");
+            HtmlPage page = CLIENT.getPage(URL_OBJECTIVE + "acura/");
             HtmlElement pageWrapper = page.getHtmlElementById("newscol2");
             List<HtmlElement> modelsInProduction = pageWrapper.getByXPath("//div[@class='carmod clearfix ']");
             List<HtmlElement> modelsDiscontinue = pageWrapper.getByXPath("//div[@class='carmod clearfix disc']");
@@ -48,7 +53,7 @@ public class App
     private void fillTradeMarks()
     {
         try {
-            HtmlPage page = client.getPage("https://www.autoevolution.com/cars/");
+            HtmlPage page = CLIENT.getPage(URL_OBJECTIVE + "cars/");
             HtmlElement pageWrapper = page.getHtmlElementById("pagewrapper");
             List<HtmlElement> tradeMarksElement = pageWrapper.getByXPath(
                     "//div[@class='col2width fl bcol-white carman'] " +
