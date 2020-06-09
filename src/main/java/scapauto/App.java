@@ -1,7 +1,6 @@
 package scapauto;
 
 import com.alibaba.fastjson.JSON;
-import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
@@ -11,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class App
+public final class App
 {
     // Const Field
 
@@ -20,21 +19,17 @@ public class App
      */
     private static final String URL_OBJECTIVE = "https://www.autoevolution.com/";
 
-    private static final WebClient CLIENT = new WebClient();
+    private static final Browser browser = new Browser();
 
     // Field
 
-    private final List<String> nameTradeMarks = new ArrayList<>();
     private final List<TradeMark> tradeMarks = new ArrayList<>();
 
     // Construct
 
     App()
     {
-        CLIENT.getOptions().setCssEnabled(false);
-        CLIENT.getOptions().setJavaScriptEnabled(false);
-
-        fillTradeMarks();
+        List<String> nameTradeMarks = browser.getNameTradeMarks(URL_OBJECTIVE + "cars/");
 
         for (String tradeMark : nameTradeMarks) {
             // Format of URL for the page: https://www.autoevolution.com/$trade-mark$/
@@ -50,7 +45,7 @@ public class App
     {
         try {
             // Format of URL for the page: https://www.autoevolution.com/$trade-mark$/
-            HtmlPage page = CLIENT.getPage(url + nameTradeMark.replace(" ", "-") + "/");
+            HtmlPage page = browser.getPage(url + nameTradeMark.replace(" ", "-") + "/");
             HtmlElement pageWrapper = page.getHtmlElementById("newscol2");
             List<HtmlElement> modelsInProduction = pageWrapper.getByXPath("//div[@class='carmod clearfix ']");
             List<HtmlElement> modelsDiscontinue = pageWrapper.getByXPath("//div[@class='carmod clearfix disc']");
@@ -62,24 +57,6 @@ public class App
             writeFileJSON(tradeMark);
             tradeMarks.add(tradeMark);
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void fillTradeMarks()
-    {
-        try {
-            HtmlPage page = CLIENT.getPage(URL_OBJECTIVE + "cars/");
-            HtmlElement pageWrapper = page.getHtmlElementById("pagewrapper");
-            List<HtmlElement> tradeMarksElement = pageWrapper.getByXPath(
-                    "//div[@class='col2width fl bcol-white carman'] " +
-                            "[@itemscope] [@itemtype='https://schema.org/Brand']");
-
-            for (var element : tradeMarksElement) {
-                HtmlElement tradeMarkH5 = element.getFirstByXPath("./h5/a[@*]/span[@itemprop='name']");
-                nameTradeMarks.add(tradeMarkH5.asText().toLowerCase());
-            }
         } catch (Exception e) {
             e.printStackTrace();
         }
