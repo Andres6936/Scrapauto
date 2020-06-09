@@ -1,5 +1,7 @@
 package scapauto;
 
+import java.util.List;
+
 public final class Auto
 {
     // Fields
@@ -46,5 +48,21 @@ public final class Auto
     public String getEngine()
     {
         return engine;
+    }
+
+    public String getAbbreviation()
+    {
+        // Remember, the model in this point have
+        // the trademark is the first string, example:
+        // Buggati Divo | Caterhman Seven 620 |
+        // Chevrolet Corvette Convertible
+        // The method return a string without
+        // the initial string of trademark
+        // Example: Divo | Seven-620 |
+        // Covette Convertible
+        final int firstPositionOfHyphenMinus =
+                model.replace(" ", "-").indexOf("-");
+
+        return model.substring(firstPositionOfHyphenMinus);
     }
 }

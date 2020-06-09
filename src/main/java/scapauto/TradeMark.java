@@ -20,6 +20,14 @@ public class TradeMark extends ArrayList<Auto>
 
     // Methods
 
+    private void extractGenerationsOfAutos()
+    {
+        for (final var auto : this) {
+            final String url = auto.getAbbreviation();
+            System.out.println(url);
+        }
+    }
+
     public void fillFromHtml(List<HtmlElement> elements)
     {
         for (var element : elements) {
@@ -45,6 +53,8 @@ public class TradeMark extends ArrayList<Auto>
 
             this.add(new Auto(nameModel, typeModel, typeEngines.toString()));
         }
+
+        extractGenerationsOfAutos();
     }
 
     // Getters
