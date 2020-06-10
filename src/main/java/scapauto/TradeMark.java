@@ -6,6 +6,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class TradeMark extends ArrayList<Auto>
 {
@@ -30,6 +31,9 @@ public class TradeMark extends ArrayList<Auto>
     {
         for (final var auto : this) {
             final String partialUrl = name + "/" + auto.getAbbreviation();
+
+            // For avoid block of host or page
+            Clockmaker.waitFor(3, TimeUnit.SECONDS);
 
             try {
                 final HtmlPage pageGenerations = browser.getPageWithGenerationsOfURL(partialUrl);
