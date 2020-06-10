@@ -1,12 +1,18 @@
 package scapauto;
 
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TradeMark extends ArrayList<Auto>
 {
+    // Static Field
+
+    private static final Browser browser = new Browser();
+
     // Const Field
 
     private final String name;
@@ -23,8 +29,22 @@ public class TradeMark extends ArrayList<Auto>
     private void extractGenerationsOfAutos()
     {
         for (final var auto : this) {
-            final String url = auto.getAbbreviation();
-            System.out.println(url);
+            final String partialUrl = name + "/" + auto.getAbbreviation();
+
+            try {
+                final HtmlPage pageGenerations = browser.getPageWithGenerationsOfURL(partialUrl);
+                final HtmlElement pageWrapper = pageGenerations.getHtmlElementById("pagewrapper");
+                final List<HtmlElement> divsGenerations = pageWrapper.getByXPath(
+                        "//div [@class='container carmodel clearfix' @*]");
+
+                for (final var element : divsGenerations) {
+                    final HtmlElement elementYears = element.getFirstByXPath("//p [@class='years']/a");
+                    final String year = elementYears.asText();
+                    System.out.println(year);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

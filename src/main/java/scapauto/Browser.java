@@ -4,11 +4,19 @@ import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public final class Browser extends WebClient
 {
+    // Final Fields
+
+    /**
+     * Site web of where we extract information
+     */
+    private static final String URL_OBJECTIVE = "https://www.autoevolution.com/";
+
     // Construct
 
     public Browser()
@@ -41,5 +49,10 @@ public final class Browser extends WebClient
         }
 
         return tradeMarks;
+    }
+
+    public HtmlPage getPageWithGenerationsOfURL(final String partialUrl) throws IOException
+    {
+        return getPage(URL_OBJECTIVE + partialUrl);
     }
 }

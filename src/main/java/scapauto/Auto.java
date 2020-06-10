@@ -63,6 +63,7 @@ public final class Auto
         final int firstPositionOfHyphenMinus =
                 model.replace(" ", "-").indexOf("-");
 
-        return model.substring(firstPositionOfHyphenMinus);
+        // Sum one for skip the whitespace initial
+        return model.substring(firstPositionOfHyphenMinus + 1);
     }
 }
