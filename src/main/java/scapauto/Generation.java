@@ -1,5 +1,7 @@
 package scapauto;
 
+import java.util.ArrayList;
+
 public final class Generation
 {
     // Final Fields
@@ -8,7 +10,7 @@ public final class Generation
 
     // Fields
 
-    private Engine engine;
+    private ArrayList<Engine> engine = new ArrayList<>();
 
     // Construct
 
@@ -19,10 +21,21 @@ public final class Generation
 
     // Getters
 
+    public String getYears()
+    {
+        return years;
+    }
+
+    public ArrayList<Engine> getEngine()
+    {
+        return engine;
+    }
+
+
     // Setters
 
-    public void setEngine(Engine engine)
+    public void addEngine(Engine engine)
     {
-        this.engine = engine;
+        this.engine.add(engine);
     }
 }

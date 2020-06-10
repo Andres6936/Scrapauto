@@ -85,7 +85,9 @@ public final class Browser extends WebClient
             final List<HtmlElement> information = pageWrapper.getByXPath(
                     "//div[@class='enginedata engine-inline']");
 
-            generation.setEngine(getEngineInformation(information.get(0)));
+            for (final var engineInfo : information) {
+                generation.addEngine(getEngineInformation(engineInfo));
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
