@@ -1,6 +1,7 @@
 package scapauto;
 
 import com.gargoylesoftware.htmlunit.WebClient;
+import com.gargoylesoftware.htmlunit.html.DomNode;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
@@ -32,10 +33,21 @@ public final class Browser extends WebClient
     private Engine getEngineInformation(final HtmlElement element)
     {
         final Engine engine = new Engine();
-
         HtmlElement tag = element.getFirstByXPath("//div[@class='title']");
-
         engine.setName(tag.asText());
+        tag = tag.getFirstByXPath("//dl//dd");
+        engine.setCylinders(tag.asText());
+
+        DomNode dd = tag.getNextElementSibling();
+        engine.setDisplacement(dd.asText());
+        dd = dd.getNextElementSibling();
+        engine.setPower(dd.asText());
+        dd = dd.getNextElementSibling();
+        engine.setTorque(dd.asText());
+        dd = dd.getNextSibling().getNextSibling();
+        engine.setFuelSystem(dd.asText());
+        dd = dd.getNextSibling();
+        engine.setFuel(dd.asText());
 
         return engine;
     }
