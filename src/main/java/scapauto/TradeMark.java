@@ -35,7 +35,7 @@ public class TradeMark extends ArrayList<Auto>
                 final HtmlPage pageGenerations = browser.getPageWithGenerationsOfURL(partialUrl);
                 final HtmlElement pageWrapper = pageGenerations.getHtmlElementById("pagewrapper");
                 final List<HtmlElement> divsGenerations = pageWrapper.getByXPath(
-                        "//div [@class='container carmodel clearfix' @*]");
+                        "//div [@class='container carmodel clearfix']");
 
                 for (final var element : divsGenerations) {
                     final HtmlElement elementYears = element.getFirstByXPath("//p [@class='years']/a");
