@@ -29,6 +29,17 @@ public final class Browser extends WebClient
 
     // Methods
 
+    private Engine getEngineInformation(final HtmlElement element)
+    {
+        final Engine engine = new Engine();
+
+        HtmlElement tag = element.getFirstByXPath("//div[@class='title']");
+
+        engine.setName(tag.asText());
+
+        return engine;
+    }
+
     public final Generation getGenerationInformationFrom(final HtmlElement element)
     {
         final String year = element.asText();
@@ -42,9 +53,7 @@ public final class Browser extends WebClient
             final List<HtmlElement> information = pageWrapper.getByXPath(
                     "//div[@class='enginedata engine-inline']");
 
-            for (final var tags : information) {
-
-            }
+            generation.setEngine(getEngineInformation(information.get(0)));
         } catch (IOException e) {
             e.printStackTrace();
         }
