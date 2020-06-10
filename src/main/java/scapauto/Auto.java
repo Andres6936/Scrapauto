@@ -1,5 +1,6 @@
 package scapauto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public final class Auto
@@ -12,6 +13,8 @@ public final class Auto
 
     private final String engine;
 
+    private final ArrayList<Generation> generations = new ArrayList<>();
+
     // Construct
 
     Auto(String _model, String _type, String _engine)
@@ -22,6 +25,11 @@ public final class Auto
     }
 
     // Methods
+
+    public void addGeneration(final Generation generation)
+    {
+        generations.add(generation);
+    }
 
     @Override
     public String toString()
@@ -48,6 +56,11 @@ public final class Auto
     public String getEngine()
     {
         return engine;
+    }
+
+    public ArrayList<Generation> getGenerations()
+    {
+        return generations;
     }
 
     public String getAbbreviation()

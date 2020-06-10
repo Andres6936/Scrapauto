@@ -39,8 +39,7 @@ public class TradeMark extends ArrayList<Auto>
 
                 for (final var element : divsGenerations) {
                     final HtmlElement elementYears = element.getFirstByXPath("//p [@class='years']/a");
-                    final String year = elementYears.asText();
-                    System.out.println(year);
+                    auto.addGeneration(browser.getGenerationInformationFrom(elementYears));
                 }
             } catch (IOException e) {
                 e.printStackTrace();

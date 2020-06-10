@@ -29,6 +29,29 @@ public final class Browser extends WebClient
 
     // Methods
 
+    public final Generation getGenerationInformationFrom(final HtmlElement element)
+    {
+        final String year = element.asText();
+        final Generation generation = new Generation(year);
+
+        final String url = element.getAttribute("href");
+
+        try {
+            final HtmlPage pageWithInformation = getPage(url);
+            final HtmlElement pageWrapper = pageWithInformation.getHtmlElementById("pagewrapper");
+            final List<HtmlElement> information = pageWrapper.getByXPath(
+                    "//div[@class='enginedata engine-inline']");
+
+            for (final var tags : information) {
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return generation;
+    }
+
     public final ArrayList<String> getNameTradeMarks(final String url)
     {
         ArrayList<String> tradeMarks = new ArrayList<>();
