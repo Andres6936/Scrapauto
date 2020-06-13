@@ -44,6 +44,9 @@ public class TradeMark extends ArrayList<Auto>
                 for (final var element : divsGenerations) {
                     final HtmlElement elementYears = element.getFirstByXPath("//p [@class='years']/a");
                     auto.addGeneration(browser.getGenerationInformationFrom(elementYears));
+
+                    // For avoid block of host or page
+                    Clockmaker.waitFor(2, TimeUnit.SECONDS);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
