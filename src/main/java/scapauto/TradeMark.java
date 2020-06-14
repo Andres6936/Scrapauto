@@ -39,11 +39,10 @@ public class TradeMark extends ArrayList<Auto>
                 final HtmlPage pageGenerations = browser.getPageWithGenerationsOfURL(partialUrl);
                 final HtmlElement pageWrapper = pageGenerations.getHtmlElementById("pagewrapper");
                 final List<HtmlElement> divsGenerations = pageWrapper.getByXPath(
-                        "//div [@class='container carmodel clearfix']");
+                        "//p [@class='years']/a");
 
                 for (final var element : divsGenerations) {
-                    final HtmlElement elementYears = element.getFirstByXPath("//p [@class='years']/a");
-                    auto.addGeneration(browser.getGenerationInformationFrom(elementYears));
+                    auto.addGeneration(browser.getGenerationInformationFrom(element));
 
                     // For avoid block of host or page
                     Clockmaker.waitFor(2, TimeUnit.SECONDS);

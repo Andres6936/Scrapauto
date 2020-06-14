@@ -73,10 +73,10 @@ public final class Auto
         // the initial string of trademark
         // Example: Divo | Seven-620 |
         // Covette Convertible
-        final int firstPositionOfHyphenMinus =
-                model.replace(" ", "-").indexOf("-");
+        final String abbr = model.replace(" ", "-");
+        final int firstPositionOfHyphenMinus = abbr.indexOf("-");
 
         // Sum one for skip the whitespace initial
-        return model.substring(firstPositionOfHyphenMinus + 1);
+        return abbr.substring(firstPositionOfHyphenMinus + 1);
     }
 }

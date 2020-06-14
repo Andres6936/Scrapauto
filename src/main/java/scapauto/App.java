@@ -35,7 +35,7 @@ public final class App
             // Format of URL for the page: https://www.autoevolution.com/$trade-mark$/
             extractInformationOfAutos(URL_OBJECTIVE, tradeMark);
             // Wait a small time for avoid will be blocked for the page or the hosting
-            Clockmaker.waitFor(10, TimeUnit.SECONDS);
+            Clockmaker.waitFor(3, TimeUnit.SECONDS);
         }
     }
 

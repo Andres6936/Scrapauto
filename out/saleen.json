@@ -1,1 +1,46 @@
-[{"engine":"Gasoline","model":"SALEEN S7","type":"coupes"},{"engine":"Gasoline","model":"SALEEN S7TT","type":"coupes"}]
+[
+  {
+    "abbreviation": "S7",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "V8",
+            "displacement": "6997 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Multipoint Injection",
+            "name": "ENGINE SPECS  –  7.0 V8",
+            "power": "404 KW @ 6400 RPM\n550 HP @ 6400 RPM\n542 BHP @ 6400 RPM",
+            "torque": "525 lb-ft @ 4000 RPM\n712 Nm @ 4000 RPM"
+          }
+        ],
+        "years": "2000 - 2004"
+      }
+    ],
+    "model": "SALEEN S7",
+    "type": "coupes"
+  },
+  {
+    "abbreviation": "S7TT",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "V8",
+            "displacement": "6997 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Multipoint Injection",
+            "name": "ENGINE SPECS  –  7.0L V8 Twin Turbo 6MT (750 HP)",
+            "power": "559 KW @ 6300 RPM\n750 HP @ 6300 RPM\n750 BHP @ 6300 RPM",
+            "torque": "700 lb-ft @ 4800 RPM\n949 Nm @ 4800 RPM"
+          }
+        ],
+        "years": "2005 - 2006"
+      }
+    ],
+    "model": "SALEEN S7TT",
+    "type": "coupes"
+  }
+]

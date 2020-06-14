@@ -1,1 +1,812 @@
-[{"engine":"Gasoline","model":"BUGATTI Divo","type":"coupes"},{"engine":"Gasoline","model":"BUGATTI Centodieci","type":"coupes"},{"engine":"Gasoline","model":"BUGATTI Chiron","type":"coupes"},{"engine":"Gasoline","model":"BUGATTI La Voiture Noire","type":"coupes"},{"engine":"Gasoline","model":"BUGATTI EB 110","type":"coupes"},{"engine":"Gasoline","model":"BUGATTI Type 10","type":"convertibles"},{"engine":"Gasoline","model":"BUGATTI Type 101","type":"convertibles"},{"engine":"Gasoline","model":"BUGATTI Type 18","type":"convertibles"},{"engine":"Gasoline","model":"BUGATTI Type 19","type":"convertibles"},{"engine":"Gasoline","model":"BUGATTI Type 2","type":"convertibles"},{"engine":"Gasoline","model":"BUGATTI Type 23","type":"convertibles"},{"engine":"Gasoline","model":"BUGATTI Type 251","type":"convertibles"},{"engine":"Gasoline","model":"BUGATTI Type 30","type":"convertibles"},{"engine":"Gasoline","model":"BUGATTI Type 38","type":"convertibles"},{"engine":"Gasoline","model":"BUGATTI Type 40","type":"convertibles"},{"engine":"Gasoline","model":"BUGATTI Type 41","type":"sedans"},{"engine":"Gasoline","model":"BUGATTI Type 43","type":"convertibles"},{"engine":"Diesel","model":"BUGATTI Type 44","type":"convertibles"},{"engine":"Gasoline","model":"BUGATTI Type 46","type":"coupes"},{"engine":"Gasoline","model":"BUGATTI Type 49","type":"convertibles"},{"engine":"Gasoline","model":"BUGATTI Type 5","type":"coupes"},{"engine":"Gasoline","model":"BUGATTI Type 50","type":"coupes"},{"engine":"Gasoline","model":"BUGATTI Type 55","type":"convertibles"},{"engine":"Gasoline","model":"BUGATTI Type 57","type":"coupes"},{"engine":"Gasoline","model":"BUGATTI Type 64","type":"coupes"},{"engine":"Gasoline","model":"BUGATTI Veyron","type":"coupes"}]
+[
+  {
+    "abbreviation": "Divo",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "W16",
+            "displacement": "7993 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Turbocharged Direct Injection",
+            "name": "ENGINE SPECS  –  8.0L W16 (1500 HP)",
+            "power": "1103.2 KW @ 6700 RPM\n1500 HP @ 6700 RPM\n1479 BHP @ 6700 RPM",
+            "torque": "1180 lb-ft @ 6000 RPM\n1600 Nm @ 6000 RPM"
+          }
+        ],
+        "years": "2018 - Present"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "W16",
+            "displacement": "7993 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Turbocharged Direct Injection",
+            "name": "ENGINE SPECS  –  8.0L W16 (1500 HP)",
+            "power": "1103.2 KW @ 6700 RPM\n1500 HP @ 6700 RPM\n1479 BHP @ 6700 RPM",
+            "torque": "1180 lb-ft @ 6000 RPM\n1600 Nm @ 6000 RPM"
+          }
+        ],
+        "years": "2018 - Present"
+      }
+    ],
+    "model": "BUGATTI Divo",
+    "type": "coupes"
+  },
+  {
+    "abbreviation": "Centodieci",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "W16",
+            "displacement": "None",
+            "fuel": "Gasoline",
+            "fuelSystem": "Turbocharged Direct Injection",
+            "name": "ENGINE SPECS  –  8.0L W16 7AT (1600 HP)",
+            "power": "1176.8 KW @ 7000 RPM\n1600 HP @ 7000 RPM\n1578 BHP @ 7000 RPM",
+            "torque": "1180 lb-ft @ 0 RPM\n1600 Nm @ 0 RPM"
+          }
+        ],
+        "years": "2019 - Present"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "W16",
+            "displacement": "None",
+            "fuel": "Gasoline",
+            "fuelSystem": "Turbocharged Direct Injection",
+            "name": "ENGINE SPECS  –  8.0L W16 7AT (1600 HP)",
+            "power": "1176.8 KW @ 7000 RPM\n1600 HP @ 7000 RPM\n1578 BHP @ 7000 RPM",
+            "torque": "1180 lb-ft @ 0 RPM\n1600 Nm @ 0 RPM"
+          }
+        ],
+        "years": "2019 - Present"
+      }
+    ],
+    "model": "BUGATTI Centodieci",
+    "type": "coupes"
+  },
+  {
+    "abbreviation": "Chiron",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "W16",
+            "displacement": "7993 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Turbocharged Direct Injection",
+            "name": "ENGINE SPECS  –  8.0L W16 7AT (1600 HP)",
+            "power": "1176.8 KW @ - RPM\n1600 HP @ - RPM\n1578 BHP @ - RPM",
+            "torque": "1180 lb-ft @ - RPM\n1600 Nm @ - RPM"
+          }
+        ],
+        "years": "2020 - Present"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "W16",
+            "displacement": "7993 cm3",
+            "fuel": "217 mph (349 km/h)",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  8.0L W16 7AT AWD (1500 HP)",
+            "power": "1103.2 KW @ 6900 RPM\n1500 HP @ 6900 RPM\n1479 BHP @ 6900 RPM",
+            "torque": "Turbocharged Direct Injection"
+          }
+        ],
+        "years": "2020 - Present"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "W16",
+            "displacement": "7993 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Turbocharged Direct Injection",
+            "name": "ENGINE SPECS  –  8.0L W16 7AT (1500 HP)",
+            "power": "1103.2 KW @ 6700 RPM\n1500 HP @ 6700 RPM\n1479 BHP @ 6700 RPM",
+            "torque": "1180 lb-ft @ 2000-6000 RPM\n1600 Nm @ 2000-6000 RPM"
+          }
+        ],
+        "years": "2018 - Present"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "W16",
+            "displacement": "7993 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Turbocharged Direct Injection",
+            "name": "ENGINE SPECS  –  8.0 W16 (1,500 HP)",
+            "power": "1103.3 KW @ 6700 RPM\n1500 HP @ 6700 RPM\n1480 BHP @ 6700 RPM",
+            "torque": "1180 lb-ft @ 2000-6000 RPM\n1600 Nm @ 2000-6000 RPM"
+          }
+        ],
+        "years": "2016 - Present"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "W16",
+            "displacement": "7993 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Turbocharged Direct Injection",
+            "name": "ENGINE SPECS  –  8.0L W16 7AT (1600 HP)",
+            "power": "1176.8 KW @ - RPM\n1600 HP @ - RPM\n1578 BHP @ - RPM",
+            "torque": "1180 lb-ft @ - RPM\n1600 Nm @ - RPM"
+          }
+        ],
+        "years": "2020 - Present"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "W16",
+            "displacement": "7993 cm3",
+            "fuel": "217 mph (349 km/h)",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  8.0L W16 7AT AWD (1500 HP)",
+            "power": "1103.2 KW @ 6900 RPM\n1500 HP @ 6900 RPM\n1479 BHP @ 6900 RPM",
+            "torque": "Turbocharged Direct Injection"
+          }
+        ],
+        "years": "2020 - Present"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "W16",
+            "displacement": "7993 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Turbocharged Direct Injection",
+            "name": "ENGINE SPECS  –  8.0L W16 7AT (1500 HP)",
+            "power": "1103.2 KW @ 6700 RPM\n1500 HP @ 6700 RPM\n1479 BHP @ 6700 RPM",
+            "torque": "1180 lb-ft @ 2000-6000 RPM\n1600 Nm @ 2000-6000 RPM"
+          }
+        ],
+        "years": "2018 - Present"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "W16",
+            "displacement": "7993 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Turbocharged Direct Injection",
+            "name": "ENGINE SPECS  –  8.0 W16 (1,500 HP)",
+            "power": "1103.3 KW @ 6700 RPM\n1500 HP @ 6700 RPM\n1480 BHP @ 6700 RPM",
+            "torque": "1180 lb-ft @ 2000-6000 RPM\n1600 Nm @ 2000-6000 RPM"
+          }
+        ],
+        "years": "2016 - Present"
+      }
+    ],
+    "model": "BUGATTI Chiron",
+    "type": "coupes"
+  },
+  {
+    "abbreviation": "La-Voiture-Noire",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "1103.2 KW @ - RPM\n1500 HP @ - RPM\n1479 BHP @ - RPM",
+            "displacement": "None",
+            "fuel": "Ventilated Discs",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  8.0L (1500 HP)",
+            "power": "1180 lb-ft @ - RPM\n1600 Nm @ - RPM",
+            "torque": "Turbocharge Direct Injection"
+          }
+        ],
+        "years": "2019 - Present"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "1103.2 KW @ - RPM\n1500 HP @ - RPM\n1479 BHP @ - RPM",
+            "displacement": "None",
+            "fuel": "Ventilated Discs",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  8.0L (1500 HP)",
+            "power": "1180 lb-ft @ - RPM\n1600 Nm @ - RPM",
+            "torque": "Turbocharge Direct Injection"
+          }
+        ],
+        "years": "2019 - Present"
+      }
+    ],
+    "model": "BUGATTI La Voiture Noire",
+    "type": "coupes"
+  },
+  {
+    "abbreviation": "EB-110",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "V12",
+            "displacement": "3498 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Electronic Injection",
+            "name": "ENGINE SPECS  –  3.5L 6MT (600 HP)",
+            "power": "441 KW @ 8250 RPM\n600 HP @ 8250 RPM\n591 BHP @ 8250 RPM",
+            "torque": "470 lb-ft @ 4000 RPM\n637 Nm @ 4000 RPM"
+          }
+        ],
+        "years": "1992 - 1995"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "V12",
+            "displacement": "3498 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Electronic Injection",
+            "name": "ENGINE SPECS  –  3.5L 6MT (560 HP)",
+            "power": "488 KW @ 8000 RPM\n560 HP @ 8000 RPM\n654 BHP @ 8000 RPM",
+            "torque": "451 lb-ft @ 3750 RPM\n611 Nm @ 3750 RPM"
+          }
+        ],
+        "years": "1991 - 1995"
+      }
+    ],
+    "model": "BUGATTI EB 110",
+    "type": "coupes"
+  },
+  {
+    "abbreviation": "Type-10",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L4",
+            "displacement": "1131 cm3",
+            "fuel": "Rear Wheel Drive",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  1.1",
+            "power": "None",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1908"
+      }
+    ],
+    "model": "BUGATTI Type 10",
+    "type": "convertibles"
+  },
+  {
+    "abbreviation": "Type-101",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "3257 cm3",
+            "fuel": "Rear Wheel Drive",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  3.3",
+            "power": "99 KW @ 5500 RPM\n135 HP @ 5500 RPM\n133 BHP @ 5500 RPM",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1951 - 1956"
+      }
+    ],
+    "model": "BUGATTI Type 101",
+    "type": "convertibles"
+  },
+  {
+    "abbreviation": "Type-18",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L4",
+            "displacement": "5026 cm3",
+            "fuel": "105 mph (169 km/h)",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  5.0",
+            "power": "None",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1912 - 1914"
+      }
+    ],
+    "model": "BUGATTI Type 18",
+    "type": "convertibles"
+  },
+  {
+    "abbreviation": "Type-19",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L4",
+            "displacement": "855 cm3",
+            "fuel": "Rear Wheel Drive",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  0.85",
+            "power": "None",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1911 - 1916"
+      }
+    ],
+    "model": "BUGATTI Type 19",
+    "type": "convertibles"
+  },
+  {
+    "abbreviation": "Type-2",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L4",
+            "displacement": "3054 cm3",
+            "fuel": "37.3 mph (60 km/h)",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  3.1",
+            "power": "None",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1900 - 1901"
+      }
+    ],
+    "model": "BUGATTI Type 2",
+    "type": "convertibles"
+  },
+  {
+    "abbreviation": "Type-23",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L4",
+            "displacement": "1368 cm3",
+            "fuel": "Rear Wheel Drive",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  1.4",
+            "power": "None",
+            "torque": "Carburetor(s)"
+          }
+        ],
+        "years": "1913 - 1914"
+      }
+    ],
+    "model": "BUGATTI Type 23",
+    "type": "convertibles"
+  },
+  {
+    "abbreviation": "Type-251",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "2486 cm3",
+            "fuel": "Rear Wheel Drive",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  2.5",
+            "power": "None",
+            "torque": "Carburetors"
+          }
+        ],
+        "years": "1955 - 1956"
+      }
+    ],
+    "model": "BUGATTI Type 251",
+    "type": "convertibles"
+  },
+  {
+    "abbreviation": "Type-30",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "1991 cm3",
+            "fuel": "75 mph (121 km/h)",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  2.0",
+            "power": "51.4 KW @ 3800 RPM\n70 HP @ 3800 RPM\n69 BHP @ 3800 RPM",
+            "torque": "Carburetors"
+          }
+        ],
+        "years": "1922 - 1926"
+      }
+    ],
+    "model": "BUGATTI Type 30",
+    "type": "convertibles"
+  },
+  {
+    "abbreviation": "Type-38",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "1991 cm3",
+            "fuel": "75 mph (121 km/h)",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  2.0",
+            "power": "None",
+            "torque": "Carburetor(s)"
+          }
+        ],
+        "years": "1926 - 1927"
+      }
+    ],
+    "model": "BUGATTI Type 38",
+    "type": "convertibles"
+  },
+  {
+    "abbreviation": "Type-40",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L4",
+            "displacement": "1496 cm3",
+            "fuel": "75 mph (121 km/h)",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  1.5",
+            "power": "33 KW @ 4300 RPM\n45 HP @ 4300 RPM\n44 BHP @ 4300 RPM",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1926 - 1930"
+      }
+    ],
+    "model": "BUGATTI Type 40",
+    "type": "convertibles"
+  },
+  {
+    "abbreviation": "Type-41",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "12736 cm3",
+            "fuel": "125 mph (201 km/h)",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  12.7",
+            "power": "224 KW @ 1600 RPM\n300 HP @ 1600 RPM\n300 BHP @ 1600 RPM",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1929 - 1933"
+      }
+    ],
+    "model": "BUGATTI Type 41",
+    "type": "sedans"
+  },
+  {
+    "abbreviation": "Type-43",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "2262 cm3",
+            "fuel": "100 mph (161 km/h)",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  2.3",
+            "power": "89 KW @ 5000 RPM\n120 HP @ 5000 RPM\n119 BHP @ 5000 RPM",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1931 - 1932"
+      }
+    ],
+    "model": "BUGATTI Type 43",
+    "type": "convertibles"
+  },
+  {
+    "abbreviation": "Type-44",
+    "engine": "Diesel",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "2991 cm3",
+            "fuel": "85 mph (137 km/h)",
+            "fuelSystem": "Diesel",
+            "name": "ENGINE SPECS  –  3.0",
+            "power": "None",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1927 - 1930"
+      }
+    ],
+    "model": "BUGATTI Type 44",
+    "type": "convertibles"
+  },
+  {
+    "abbreviation": "Type-46",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "5359 cm3",
+            "fuel": "90 mph (145 km/h)",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  5.4",
+            "power": "103 KW @ 3500 RPM\n140 HP @ 3500 RPM\n138 BHP @ 3500 RPM",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1929 - 1936"
+      }
+    ],
+    "model": "BUGATTI Type 46",
+    "type": "coupes"
+  },
+  {
+    "abbreviation": "Type-49",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "3257 cm3",
+            "fuel": "85 mph (137 km/h)",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  3.3",
+            "power": "None",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1930 - 1934"
+      }
+    ],
+    "model": "BUGATTI Type 49",
+    "type": "convertibles"
+  },
+  {
+    "abbreviation": "Type-5",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L4",
+            "displacement": "12867 cm3",
+            "fuel": "Front Wheel Drive",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  12.9",
+            "power": "None",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1903"
+      }
+    ],
+    "model": "BUGATTI Type 5",
+    "type": "coupes"
+  },
+  {
+    "abbreviation": "Type-50",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "4972 cm3",
+            "fuel": "Rear Wheel Drive",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  5.0",
+            "power": "166 KW @ 4000 RPM\n225 HP @ 4000 RPM\n223 BHP @ 4000 RPM",
+            "torque": "Carburetors"
+          }
+        ],
+        "years": "1930 - 1934"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "4972 cm3",
+            "fuel": "119 mph (192 km/h)",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  5.0",
+            "power": "147 KW @ 4000 RPM\n200 HP @ 4000 RPM\n197 BHP @ 4000 RPM",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1930 - 1934"
+      }
+    ],
+    "model": "BUGATTI Type 50",
+    "type": "coupes"
+  },
+  {
+    "abbreviation": "Type-55",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "2262 cm3",
+            "fuel": "112 mph (180 km/h)",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  2.3",
+            "power": "96 KW @ 5000 RPM\n130 HP @ 5000 RPM\n129 BHP @ 5000 RPM",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1932 - 1935"
+      }
+    ],
+    "model": "BUGATTI Type 55",
+    "type": "convertibles"
+  },
+  {
+    "abbreviation": "Type-57",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "3257 cm3",
+            "fuel": "Rear Wheel Drive",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  3.3",
+            "power": "147 KW @ 5500 RPM\n200 HP @ 5500 RPM\n197 BHP @ 5500 RPM",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1937 - 1938"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "3257 cm3",
+            "fuel": "137 mph (220 km/h)",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  3.3",
+            "power": "129 KW @ 5500 RPM\n175 HP @ 5500 RPM\n173 BHP @ 5500 RPM",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1936 - 1938"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "3257 cm3",
+            "fuel": "Rear Wheel Drive",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  3.3",
+            "power": "99 KW @ 5000 RPM\n135 HP @ 5000 RPM\n133 BHP @ 5000 RPM",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1934 - 1940"
+      }
+    ],
+    "model": "BUGATTI Type 57",
+    "type": "coupes"
+  },
+  {
+    "abbreviation": "Type-64",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "L8",
+            "displacement": "4432 cm3",
+            "fuel": "120 mph (193 km/h)",
+            "fuelSystem": "Gasoline",
+            "name": "ENGINE SPECS  –  4.4",
+            "power": "None",
+            "torque": "Carburetor"
+          }
+        ],
+        "years": "1939"
+      }
+    ],
+    "model": "BUGATTI Type 64",
+    "type": "coupes"
+  },
+  {
+    "abbreviation": "Veyron",
+    "engine": "Gasoline",
+    "generations": [
+      {
+        "engine": [
+          {
+            "cylinders": "16",
+            "displacement": "7993 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Direct injection",
+            "name": "ENGINE SPECS  –  8.0 W16 7AT (1200 HP)",
+            "power": "883 KW @ 6400 RPM\n1200 HP @ 6400 RPM\n1184 BHP @ 6400 RPM",
+            "torque": "1106 lb-ft @ 3000-5000 RPM\n1500 Nm @ 3000-5000 RPM"
+          }
+        ],
+        "years": "2012 - 2015"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "W16",
+            "displacement": "7993 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Direct Injection",
+            "name": "ENGINE SPECS  –  8.0L W16 7AT (1201 HP)",
+            "power": "883 KW @ 6400 RPM\n1201 HP @ 6400 RPM\n1184 BHP @ 6400 RPM",
+            "torque": "1106 lb-ft @ 3000-3500 RPM\n1500 Nm @ 3000-3500 RPM"
+          }
+        ],
+        "years": "2010 - 2011"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "W16",
+            "displacement": "7993 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Direct Injection",
+            "name": "ENGINE SPECS  –  8.0L W16 7AT (1001 HP)",
+            "power": "736 KW @ 6000 RPM\n1001 HP @ 6000 RPM\n987 BHP @ 6000 RPM",
+            "torque": "922 lb-ft @ 2200 RPM\n1250 Nm @ 2200 RPM"
+          }
+        ],
+        "years": "2009 - 2015"
+      },
+      {
+        "engine": [
+          {
+            "cylinders": "W16",
+            "displacement": "7993 cm3",
+            "fuel": "Gasoline",
+            "fuelSystem": "Electronic Injection",
+            "name": "ENGINE SPECS  –  8.0L W16 7AT (1001 HP)",
+            "power": "736 KW @ 6000 RPM\n1001 HP @ 6000 RPM\n987 BHP @ 6000 RPM",
+            "torque": "922 lb-ft @ 2200 RPM\n1250 Nm @ 2200 RPM"
+          }
+        ],
+        "years": "2005 - 2011"
+      }
+    ],
+    "model": "BUGATTI Veyron",
+    "type": "coupes"
+  }
+]
