@@ -55,23 +55,10 @@ public final class App
             tradeMark.fillFromHtml(modelsInProduction);
             tradeMark.fillFromHtml(modelsDiscontinue);
 
-            writeFileJSON(tradeMark);
+            Playwright.writeFileJSON(tradeMark, tradeMark.getName());
             tradeMarks.add(tradeMark);
 
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void writeFileJSON(final TradeMark _tradeMark)
-    {
-        String formatJSON = JSON.toJSONString(_tradeMark);
-
-        try {
-            PrintWriter printWriter = new PrintWriter(_tradeMark.getName() + ".json");
-            printWriter.println(formatJSON);
-            printWriter.close();
-        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
