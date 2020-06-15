@@ -3,6 +3,7 @@ package scapauto;
 import com.alibaba.fastjson.JSON;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import scapauto.controller.TradeMarkController;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -19,7 +20,7 @@ public final class App
      */
     private static final String URL_OBJECTIVE = "https://www.autoevolution.com/";
 
-    private static final Browser browser = new Browser();
+    public static final Browser browser = new Browser();
 
     // Field
 
@@ -29,7 +30,7 @@ public final class App
 
     App()
     {
-        List<String> nameTradeMarks = browser.getNameTradeMarks(URL_OBJECTIVE + "cars/");
+        List<String> nameTradeMarks = TradeMarkController.getNameTradeMarks(URL_OBJECTIVE + "cars/");
 
         for (String tradeMark : nameTradeMarks) {
             // Format of URL for the page: https://www.autoevolution.com/$trade-mark$/

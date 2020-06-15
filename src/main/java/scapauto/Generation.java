@@ -14,7 +14,7 @@ public final class Generation
 
     // Construct
 
-    Generation(final String years)
+    public Generation(final String years)
     {
         this.years = years;
     }
