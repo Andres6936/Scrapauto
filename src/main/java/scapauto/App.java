@@ -34,7 +34,7 @@ public final class App
 
         for (String tradeMark : nameTradeMarks) {
             // Format of URL for the page: https://www.autoevolution.com/$trade-mark$/
-            extractInformationOfAutos(URL_OBJECTIVE, tradeMark);
+            extractInformationOfAutos(tradeMark);
             // Wait a small time for avoid will be blocked for the page or the hosting
             Clockmaker.waitFor(3, TimeUnit.SECONDS);
         }
@@ -42,11 +42,11 @@ public final class App
 
     // Methods
 
-    private void extractInformationOfAutos(final String url, final String nameTradeMark)
+    private void extractInformationOfAutos(final String nameTradeMark)
     {
         try {
             // Format of URL for the page: https://www.autoevolution.com/$trade-mark$/
-            HtmlPage page = browser.getPage(url + nameTradeMark.replace(" ", "-") + "/");
+            HtmlPage page = browser.getPageWithGenerationsOfURL(nameTradeMark.replace(" ", "-") + "/");
             HtmlElement pageWrapper = page.getHtmlElementById("newscol2");
             List<HtmlElement> modelsInProduction = pageWrapper.getByXPath("//div[@class='carmod clearfix ']");
             List<HtmlElement> modelsDiscontinue = pageWrapper.getByXPath("//div[@class='carmod clearfix disc']");

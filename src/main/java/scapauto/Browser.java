@@ -22,6 +22,7 @@ public final class Browser extends WebClient
 
         getOptions().setCssEnabled(false);
         getOptions().setJavaScriptEnabled(false);
+        getOptions().setPrintContentOnFailingStatusCode(false);
     }
 
     // Methods
